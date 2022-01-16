@@ -1,0 +1,3 @@
+# Build Notes
+
+I would suggest fitting U6 and U7 with Sockets.  U6 is for the 22V10 PLD, and should be socketed so updated JEDECs can be programmed.  I suggest socketing U7 to allow switching between a Bus Transceiver and Resistor.  While resistors are perfectly safe, a Bus Transceiver is optimal.  Once the cause of the Bus Transceiver's incorrect operation is determined, a modified JEDEC, BOM or Board design will be released so that a Transceiver can be used.
