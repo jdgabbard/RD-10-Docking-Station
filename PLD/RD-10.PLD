@@ -1,0 +1,54 @@
+Name      RD-10;
+Partno    ;
+Date      03/21/2017;
+Rev       01;
+Designer  Gabbard;
+Company   RetroDepot Projects;
+Assembly  None;
+Location  None;
+Device    G22V10;
+
+
+/** Inputs **/
+
+PIN 1 = RD;
+PIN 2 = IORQ;
+PIN 3 = M1;
+PIN 4 = A7;
+PIN 5 = A6;
+PIN 6 = A5;
+PIN 7 = A4;
+PIN 8 = A3;
+PIN 9 = A2;
+PIN 10 = A1;
+PIN 11 = A0;
+PIN 13 = MREQ;
+PIN 14 = RFSH;
+PIN 16 = WR;
+PIN 19 = SLOTA;
+PIN 18 = SLOTB;
+
+
+/** Outputs **/
+
+PIN 20 = PPI_CS;
+PIN 21 = REG;
+PIN 23 = SLTSL2;
+PIN 22 = SLTSL3;
+PIN 15 = SLTSLEN;
+
+
+/** Equations **/
+
+REG = !IORQ & !WR & A7 & !A6 & A5 & !A4 & A3 & !A2 & !A1 & !A0; /* A8h */
+
+!PPI_CS = !IORQ & A7 & !A6 & A5 & !A4 & A3 & !A2 ; /* A8h - ABh - Should also gate M1*/
+
+!SLTSL2 = !SLOTA & SLOTB & !MREQ & RFSH; /* SLOT2 !SLOTSL */
+
+!SLTSL3 = SLOTA & SLOTB & !MREQ & RFSH; /* SLOT3 !SLOTSL */
+
+!SLTSLEN = !SLOTA & SLOTB & !MREQ & RFSH & !RD
+	# SLOTA & SLOTB & !MREQ & RFSH & !RD
+	# !IORQ & M1;				/* EXPANDER DATA BUS DIRECTION SIGNAL */
+
