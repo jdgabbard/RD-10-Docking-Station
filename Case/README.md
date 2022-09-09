@@ -8,4 +8,6 @@ The Fusion 360 Archive can be used to modify the original design.  You're welcom
 
 The STEP format can be used to import into other CAD software.  You're welcome...<br>
 
+Build Note: HRA reports M3.5 x 12mm counter sunk screws are a perfect fit.<br>
+
 If you have any issues with these files, please let me know.<br>
