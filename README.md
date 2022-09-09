@@ -1,6 +1,8 @@
 # RD-10-Docking-Station
 A DIY Docking Station for the Casio MX-10 / MX-15 MSX computers
 
+***REV 2 Board Added to Repository***
+
 ***See Build Notes file for special instructions!***
 
 Designed to replace or substitute the KB-10 or KB-15 docking station. Future releases may expand this design. For now, consider it a way to have more than one catridge in your MX-10 or MX-15 at a time.  ***For details, see below.***
